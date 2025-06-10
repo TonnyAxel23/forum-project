@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thread Title - Forum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/images/logo.png" alt="Forum Logo" height="30" class="d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="thread-list.html">Threads</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search threads...">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </div>
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../signup.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="thread-list.html">Threads</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Thread Title</li>
+            </ol>
+        </nav>
+
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h4 class="mb-0" id="threadTitle">Thread Title</h4>
+                <span class="badge bg-primary" id="threadCategory">Tech</span>
+            </div>
+            <div class="card-body">
+                <div class="d-flex mb-3">
+                    <div class="flex-shrink-0">
+                        <img src="../../assets/images/placeholder-avatar.png" alt="User avatar" class="rounded-circle avatar">
+                    </div>
+                    <div class="ms-3">
+                        <div class="fw-bold" id="threadAuthor">Username</div>
+                        <small class="text-muted" id="threadDate">Posted on January 1, 2023</small>
+                    </div>
+                </div>
+                <p class="card-text" id="threadContent">Thread content goes here...</p>
+                <div class="d-flex justify-content-between mt-3">
+                    <div>
+                        <button class="btn btn-sm btn-outline-primary me-2" id="likeThread">Like (5)</button>
+                        <button class="btn btn-sm btn-outline-secondary">Reply</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-outline-danger">Report</button>
+                    </div>
+                </div>
+                <div class="mt-2" id="threadTags">
+                    <small>Tags: 
+                        <span class="badge bg-secondary">PHP</span>
+                        <span class="badge bg-secondary">Security</span>
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <h5>Replies</h5>
+            <div class="list-group mt-3" id="repliesList">
+                <!-- Replies will be loaded here via JavaScript -->
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Post a Reply</h5>
+            </div>
+            <div class="card-body">
+                <form id="replyForm">
+                    <div class="mb-3">
+                        <textarea class="form-control" id="replyContent" rows="3" placeholder="Write your reply..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Reply</button>
+                </form>
+            </div>
+        </div>
+
+        <nav class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 Forum Discussion Board. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
